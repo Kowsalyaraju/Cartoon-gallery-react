@@ -13,8 +13,8 @@ function Navbar(){
       </div>
 
       <div className="container__three">
-        <h4><a href="">Home</a></h4>
-        <h4><a href="">Favourite</a></h4>
+        <h4><a href="#home">Home</a></h4>
+        <h4><a href="#favourite">Favourite</a></h4>
       </div>
 
     </div>

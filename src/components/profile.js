@@ -10,7 +10,7 @@ function Galleryone(props)
 {
   return(
     <div className="gallery">
-      <img src={props.pho} alt="image" />
+      <img src={props.pho} alt={props.syn} />
       <h2>{props.syn}</h2>
       <p style={{color:"blueviolet"}}>{props.desc}</p>
     </div>
