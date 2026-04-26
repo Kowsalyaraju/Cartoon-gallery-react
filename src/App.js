@@ -1,25 +1,30 @@
-import logo from './logo.svg';
-import './App.css';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+import Navbar from "./components/navbar";
+import Heading from "./components/heading";
+import Galleryone, {photo} from "./components/profile";
+
+
+
+function App()
+{
+    return(
+      
+  <div>
+    <Navbar></Navbar>
+    <Heading></Heading>
+
+   <div className="gallery__card">
+     {
+    photo.map(function(item)
+    {
+      return(<Galleryone pho={item.url} syn={item.title} desc={item.description}></Galleryone>)
+    })
+  }
+   </div>
+    
+  </div>
+)
+    
 }
 
-export default App;
+export default App

@@ -1,0 +1,154 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+body{
+    font-family: "Poppins", sans-serif;
+    background-color: rgb(233, 231, 231);
+    position: relative;
+}
+
+.main{
+    display: flex;
+    background-color: white;
+    border-bottom: solid black 1px;
+    align-items: center;
+    padding: 10px;
+    justify-content: space-around;
+    z-index: 1;
+    top: 0;
+    position: sticky;
+}
+
+.container__one{
+    padding: 10px;
+    color: blueviolet;
+}
+
+.container__two{
+    border: solid black 1px;
+    width: 60%;
+    padding: 13px;
+    border-radius: 20px;
+    display: flex;
+}
+
+.container__two input{
+    width: 100%;
+    outline: none;
+    border: none;
+}
+
+.container__three{
+    display: flex;
+    color: blueviolet;
+    gap: 20px;
+    cursor: pointer;
+}
+
+.container__three a{
+    text-decoration: none;
+}
+
+.container__three a:hover{
+    text-decoration: underline;
+}
+
+.container__four{
+    display: none;
+    cursor: pointer;
+}
+
+.heading{
+    color: blueviolet;
+    text-align: center;
+    margin-top: 50px;
+
+}
+
+.gallery__card{
+   display:grid;
+grid-template-columns: 1fr 1fr 1fr ;
+grid-template-rows: 3fr 3fr;
+ gap:20px;
+padding:50px;
+
+}
+
+.gallery{
+    background:white;
+border-radius:12px;
+box-shadow:0 4px 10px rgba(0,0,0,0.1);
+cursor: pointer;
+text-align:center;
+padding-bottom:15px;
+height: 380px;
+margin: 20px;
+transition: 1s;
+animation:float 4s ease-in-out infinite;
+}
+
+@keyframes float{
+50%{
+transform:translateY(-6px);
+}
+}
+
+.gallery h2{
+   color:#2d1b69;
+}
+
+.gallery img{
+    width:100%;
+height:85%;
+object-fit:cover;
+border-radius:12px;
+
+}
+
+
+.gallery:hover{
+    transform:translateY(-12px) scale(1.03);
+box-shadow:
+0 18px 35px rgba(186, 5, 241, 0.2),
+0 0 20px rgba(184, 7, 228, 0.25);
+}
+
+.gallery p{
+color:#8a2be2;
+font-weight:500;
+}
+
+@media screen and (max-width:800px){
+    .container__two{
+        display: none;
+    }
+
+    .main{
+        justify-content: space-between;
+        padding: 10px;
+    }
+
+    body{
+        font-size: 10px;
+    }
+
+    .container__four{
+        display: block;
+    }
+
+    .hidden{
+        font-size: 15px;
+    }
+
+    .gallery__card{
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+    }
+
+    .gallery{
+        height: 220px;
+        width: 100%;
+    }
+}
